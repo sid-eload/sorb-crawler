@@ -4,7 +4,7 @@ import operator
 
 #Crawls out a link and should return post count
 
-url = "https://forum.sorbmc.com/index.php?topic=2340"
+url = "https://forum.sorbmc.com/index.php?topic=12728"
 
 r = requests.get(url)
 
@@ -58,9 +58,10 @@ if r.status_code == 200:
 					st = st.strip()
 					d[st]=1
 
-	sorted(d, key=d.get, reverse=True)[:5]				
-	for key in d:
-		print key, d[key]
+	newA = dict(sorted(d.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])				
+	for key in newA:
+		print key, newA[key]
+	#print sorted_x.reverse()
 else:
 	print 'something wrong. try again later kiddo'
 	
