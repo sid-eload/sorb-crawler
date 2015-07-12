@@ -10,8 +10,8 @@ url = raw_input("Enter URL in correct format: ")
 #url = "https://forum.sorbmc.com/index.php?topic=12728"
 #to test : https://forum.sorbmc.com/index.php?topic=2340.msg131810;topicseen#new
 flag1 = 0
-flag2 = 0
 flag3 = 0 #flags for testing of exceptions
+temp = ''
 try:
 	temp = url.split('=',1)[1]
 except:
@@ -19,14 +19,16 @@ except:
 try:
 	num_th = temp.split('.',1)[0]
 except :
-	flag2 = 1
+	num_th = temp
 
 try:
 	r = requests.get(url)
 except:
 	flag3 = 1
 
-if flag3 ==0 and flag2 == 0 and flag1 == 0:
+#print flag3 , flag1
+
+if flag3 ==0 and flag1 == 0:
 	url = "https://forum.sorbmc.com/index.php?topic="+num_th
 	#print url
 	r = requests.get(url)

@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
     name = "sorbcrawler",
-    version = "1.0",
+    version = "1.02",
     author = "sid-eload",
     author_email = "sideload3695@gmail.com",
     description = ("Crawls through sorb forum threads, and returns the top 10 posters and their post count"),
