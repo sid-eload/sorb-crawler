@@ -10,6 +10,8 @@ A simple python script which returns the top 10 posters in a SORB Forum thread a
 ``sudo python setup.py install``
 [Make sure you are using python2]
 
+``pip install sorbcrawler``
+
 ## Usage ##
 ``sorb-crawler``
 [Takes URL as input]
