@@ -13,5 +13,5 @@ or
 ``pip install sorbcrawler``
 
 ## Usage ##
-``sorb-crawler``
+``sorbcrawler``
 [Takes URL as input]
