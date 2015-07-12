@@ -1,16 +1,15 @@
-#############################################
-**Crawler to scrap up data from sorb threads**
-#############################################
+# sorb-crawler
+A simple python script which returns the top 10 posters in a SORB Forum thread and their post count.
 
-**Instructions** :
+## Requirements ##
+* beautifulSoup4
+* requests
+* python2 only
 
-1) Atm, not got a GUI( TODO!) , so to go to specific url, you need to edit the python file
-	#Line no.7 , url = "https://forum.sorbmc.com/index.php?topic=2340" (ensure, the link is in this format only)
-2) Install requirements, if errors arise.
+## Installation ##
+``sudo python setup.py install``
+[Make sure you are using python2]
 
-#############################################
-
-**TODO**: 
-*Options*: 
--make a site or maybe a command line tool ?
--auto-correcting of urls, and error reporting
+## Usage ##
+``sorb-crawler``
+[Takes URL as input]
