@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import operator
+from collections import OrderedDict
 
 #Crawls out a link and should return post count
 
@@ -34,7 +35,7 @@ if r.status_code == 200:
 		term = 15*i
 		url2 = url +"." + str(term)
 		#print url2
-
+		print term
 		r2 = requests.get(url2)	
 		data2 = BeautifulSoup(r2.text, 'html.parser')
 		filt = data2.find_all("h4", { "class" : "perfiltitle" })
@@ -58,9 +59,10 @@ if r.status_code == 200:
 					st = st.strip()
 					d[st]=1
 
-	newA = dict(sorted(d.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])				
-	for key in newA:
-		print key, newA[key]
+	#newA = dict(sorted(d.iteritems(), key=operator.itemgetter(1), reverse=True)[:5])
+	d_d = OrderedDict(sorted(d.items(), key=lambda kv: kv[1], reverse=True)[:10])				
+	for key in d_d:
+		print key, d_d[key]
 	#print sorted_x.reverse()
 else:
 	print 'something wrong. try again later kiddo'
