@@ -12,7 +12,7 @@ setup(
     name = "sorbcrawler",
     version = "1.0",
     author = "sid-eload",
-    author_email = "sid-eload@gmail.com",
+    author_email = "sideload3695@gmail.com",
     description = ("Crawls through sorb forum threads, and returns the top 10 posters and their post count"),
     license = "N/A",
     keywords = "sorb thread count post",
